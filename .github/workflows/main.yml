@@ -27,6 +27,9 @@ jobs:
     - name: Check what's going on
       run: ls
 
+    - name: find output folder
+      run: find / -type d -name _site
+
     # Sync website from github
     - name: ftp-action
       uses: sebastianpopp/ftp-action@v2.0.0
