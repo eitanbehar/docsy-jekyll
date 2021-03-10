@@ -1,6 +1,7 @@
 ---
-title: News
-permalink: /news/
+title: Baconao.NET Posts
+layout: page
+permalink: /
 ---
 
 # News
