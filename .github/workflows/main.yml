@@ -24,6 +24,9 @@ jobs:
     - name: Grant permissions
       run: sudo chown -R $(whoami):$(whoami) ./ 
 
+    - name: Create target folder
+      run: sudo mkdir ./site
+
     - name: Build site with docker-compose
       run: docker-compose up
     
