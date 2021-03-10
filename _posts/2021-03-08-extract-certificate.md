@@ -14,13 +14,13 @@ Well, it’s pretty simple. See below a C# working example for .NET Core
 
 <!--more-->
 
-## Declare your Http Handler
+### Declare your Http Handler
 
 ~~~ csharp
 private readonly HttpClientHandler handler; 
 ~~~
 
-## Initialize the handler, Callback method, and Certificate Export
+### Initialize the handler, Callback method, and Certificate Export
 
 ~~~ csharp
 handler = new HttpClientHandler
@@ -34,7 +34,7 @@ handler = new HttpClientHandler
 };
 ~~~ 
 
-## Do a HTTP call using the handler
+### Do a HTTP call using the handler
 
 ~~~ csharp
 public string DoACall(string url)
@@ -47,14 +47,14 @@ public string DoACall(string url)
 }
 ~~~
 
-## Usage
+### Usage
 
 ~~~ csharp
 var caller = new WebCaller();
 var result = caller.DoACall("https://google.com/");
 ~~~ 
 
-## Source Code
+### Source Code
 
 <https://github.com/eitanbehar/WebClient>
 

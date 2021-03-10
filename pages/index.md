@@ -7,7 +7,7 @@ permalink: /
 # Posts on techy stuff
 
 <p>Subscribe with <a href="{{ site.baseurl }}/feed.xml">RSS</a> to keep up with the latest news.</p>
-<p><a href="{{ site.baseurl }}/archive/">News Archive</a></p>
+<p><a href="{{ site.baseurl }}/archive/">Posts Archive</a></p>
 
 <br>
 
@@ -24,4 +24,4 @@ permalink: /
    <hr>
 {% endfor %}
 
-Want to see more? See the <a href="{{ site.baseurl }}/archive/">News Archive</a>.
+Want to see more? See the <a href="{{ site.baseurl }}/archive/">Posts Archive</a>.
