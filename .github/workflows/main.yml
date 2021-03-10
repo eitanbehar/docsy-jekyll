@@ -25,13 +25,13 @@ jobs:
       run: docker-compose up -d
 
     # Sync website from github
-    #- name: ftp-action
-    #  uses: sebastianpopp/ftp-action@v2.0.0
-    #  with: 
-    #    host: baconao.net
-    #    user: baconao_apps@baconao.net
-    #    password: zl9bZpo%ZkET
-    #    localDir: webapps
-    #    remoteDir: .
+    - name: ftp-action
+      uses: sebastianpopp/ftp-action@v2.0.0
+      with: 
+        host: baconao.net
+        user: baconao_posts@baconao.net
+        password: +(b5y.,T_0EC
+        localDir: _site
+        remoteDir: .
         
         
