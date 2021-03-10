@@ -5,6 +5,9 @@ categories: https, netcore, certificate
 badges: 
  - type: info
    tag: netcore
+tags:
+ - netcore
+ - csharp
 ---
 
 Sometimes you want to programmatically extract / export the server certificates in a HTTPS call. 

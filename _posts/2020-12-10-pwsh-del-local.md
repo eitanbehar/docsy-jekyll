@@ -5,6 +5,9 @@ categories: powershell
 badges: 
  - type: info
    tag: powershell
+tags:
+ - powershell
+ - git
 ---
 
 Assuming your local git repo is on master, you can delete all local branches except master using this one-line script:
