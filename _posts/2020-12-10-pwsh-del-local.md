@@ -15,11 +15,10 @@ git branch | foreach { $_.split( "`n" ) } | foreach { if ($_ -ne '* master' ) { 
 
 I strongly recommend doing first a **dry-run** to see which branches will be deleted:
 
-
 ~~~ bash
 git branch | foreach { $_.split( "`n" ) } | foreach { if ($_ -ne '* master' ) { write $_ } }
 ~~~ 
 
 After I wrote the code above, I found this one: 
-* https://dev.to/koscheyscrag/git-how-to-delete-all-branches-except-master-2pi0 
+<https://dev.to/koscheyscrag/git-how-to-delete-all-branches-except-master-2pi0>
 *which seems nicer :)*

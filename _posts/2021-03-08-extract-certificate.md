@@ -14,13 +14,13 @@ Well, it’s pretty simple. See below a C# working example for .NET Core
 
 ## Declare your Http Handler
 
-```
+~~~ csharp
 private readonly HttpClientHandler handler; 
-```
+~~~
 
 ## Initialize the handler, Callback method, and Certificate Export
 
-```
+~~~ csharp
 handler = new HttpClientHandler
 {
     ServerCertificateCustomValidationCallback = (message, certificate, chain, sslPolicyErrors) =>
@@ -30,11 +30,11 @@ handler = new HttpClientHandler
         return true;
     }
 };
-``` 
+~~~ 
 
 ## Do a HTTP call using the handler
 
-{% highlight csharp %}
+~~~ csharp
 public string DoACall(string url)
 {
     using (var client = new HttpClient(handler))
@@ -43,7 +43,7 @@ public string DoACall(string url)
         return response.Result.ToString();
     }
 }
-{% endhighlight %}
+~~~
 
 ## Usage
 
@@ -52,6 +52,7 @@ var caller = new WebCaller();
 var result = caller.DoACall("https://google.com/");
 ~~~ 
 
-## More
-Code here: https://github.com/eitanbehar/WebClient
+## Source Code
+
+<https://github.com/eitanbehar/WebClient>
 
