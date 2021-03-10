@@ -11,7 +11,7 @@ Sometimes you want to programmatically extract / export the server certificates 
 Well, it’s pretty simple. See below a C# working example for .NET Core
 
 ## Declare your Http Handler
-```csharp
+~~~ csharp
 private readonly HttpClientHandler handler; 
 Initialize the handler, Callback method, and Certificate Export
 handler = new HttpClientHandler
@@ -23,11 +23,11 @@ handler = new HttpClientHandler
         return true;
     }
 };
-```
+~~~ 
 
 ## Do a HTTP call using the handler
 
-```csharp
+~~~ csharp
 public string DoACall(string url)
 {
     using (var client = new HttpClient(handler))
@@ -36,14 +36,14 @@ public string DoACall(string url)
         return response.Result.ToString();
     }
 }
-```
+~~~ 
 
 ## Usage
 
-```csharp
+~~~ csharp
 var caller = new WebCaller();
 var result = caller.DoACall("https://google.com/");
-```
+~~~ 
 
 ## More
 Code here: https://github.com/eitanbehar/WebClient
