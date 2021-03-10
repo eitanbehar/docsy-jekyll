@@ -4,7 +4,7 @@ layout: page
 permalink: /
 ---
 
-# News
+# Posts on techy stuff
 
 <p>Subscribe with <a href="{{ site.baseurl }}/feed.xml">RSS</a> to keep up with the latest news.</p>
 <p><a href="{{ site.baseurl }}/archive/">News Archive</a></p>

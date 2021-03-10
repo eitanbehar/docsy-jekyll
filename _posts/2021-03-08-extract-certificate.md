@@ -1,10 +1,9 @@
 ---
 title:  "How To Extract A Certificate From A HTTPS Call Using .NET Core"
 date:   2021-03-08 
-categories: https, netcore, certificate
 badges: 
  - type: info
-   tag: netcore
+   tag: https
 tags:
  - netcore
  - csharp

@@ -3,8 +3,8 @@ title:  "Powershell: Delete all local branches except master"
 date:   2020-12-10 
 categories: powershell
 badges: 
- - type: info
-   tag: powershell
+ - type: warning
+   tag: use carefully
 tags:
  - powershell
  - git
@@ -15,6 +15,8 @@ Assuming your local git repo is on master, you can delete all local branches exc
 ~~~ bash
 git branch | foreach { $_.split( "`n" ) } | foreach { if ($_ -ne '* master' ) { git branch -D $_.replace(' ', '') } }
 ~~~
+
+<!--more-->
 
 I strongly recommend doing first a **dry-run** to see which branches will be deleted:
 
