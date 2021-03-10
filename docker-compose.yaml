@@ -2,8 +2,8 @@ version: '3.7'
 services:
   site:
     container_name: docsy
-    command: jekyll serve --no-watch --drafts --incremental
-    #command: jekyll build    
+    #command: jekyll serve --no-watch --drafts --incremental
+    command: jekyll build    
     image: jekyll/jekyll:3.8
     volumes: 
       - "./:/srv/jekyll"
