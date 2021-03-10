@@ -10,10 +10,17 @@ badges:
 Sometimes you want to programmatically extract / export the server certificates in a HTTPS call. 
 Well, it’s pretty simple. See below a C# working example for .NET Core
 
+<!--more-->
+
 ## Declare your Http Handler
-~~~ csharp
+
+```
 private readonly HttpClientHandler handler; 
-Initialize the handler, Callback method, and Certificate Export
+```
+
+## Initialize the handler, Callback method, and Certificate Export
+
+```
 handler = new HttpClientHandler
 {
     ServerCertificateCustomValidationCallback = (message, certificate, chain, sslPolicyErrors) =>
@@ -23,11 +30,11 @@ handler = new HttpClientHandler
         return true;
     }
 };
-~~~ 
+``` 
 
 ## Do a HTTP call using the handler
 
-~~~ csharp
+{% highlight csharp %}
 public string DoACall(string url)
 {
     using (var client = new HttpClient(handler))
@@ -36,7 +43,7 @@ public string DoACall(string url)
         return response.Result.ToString();
     }
 }
-~~~ 
+{% endhighlight %}
 
 ## Usage
 
