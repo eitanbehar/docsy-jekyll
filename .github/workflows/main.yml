@@ -27,8 +27,8 @@ jobs:
     - name: Check what's going on
       run: ls
 
-    - name: find output folder
-      run: find / -type d -name _site
+    - name: find running container
+      run: docker ps -a
 
     # Sync website from github
     - name: ftp-action
