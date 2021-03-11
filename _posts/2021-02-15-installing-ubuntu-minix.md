@@ -17,6 +17,8 @@ So, project at hand:
 * Mount external USB disk, and make sure it's mounted after restart
 * Install Transmission
 
+<!--more-->
+
 ## Installing Ubuntu Server
 
 It was pretty straighforward, just followed (some of) the instructions here:
