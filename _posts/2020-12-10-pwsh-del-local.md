@@ -10,9 +10,9 @@ tags:
  - git
 ---
 
-Assuming your local git repo is on master, you can delete all local branches except master using this one-line script:
+Assuming your local git repo is on master, you can delete all local branches except master using this one-line **powershell** script:
 
-~~~ bash
+~~~ powershell
 git branch | foreach { $_.split( "`n" ) } | foreach { if ($_ -ne '* master' ) { git branch -D $_.replace(' ', '') } }
 ~~~
 
@@ -20,7 +20,7 @@ git branch | foreach { $_.split( "`n" ) } | foreach { if ($_ -ne '* master' ) { 
 
 I strongly recommend doing first a **dry-run** to see which branches will be deleted:
 
-~~~ bash
+~~~ powershell
 git branch | foreach { $_.split( "`n" ) } | foreach { if ($_ -ne '* master' ) { write $_ } }
 ~~~ 
 
