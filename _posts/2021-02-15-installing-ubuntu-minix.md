@@ -34,7 +34,50 @@ Basically it was:
 
 ## Mounting USB external drive
 
+It is something like this:
+
+```
+mkdir /media/external
+mount /dev/sda1 /media/external
+ls /media/external
+sudo blkid /dev/sda1 | awk -F'"' '{print $2}'
+cp /etc/fstab /etc/fstab.backup
+nano /etc/fstab
+```
+
+fstab file:
+``` config
+# 96A803ADA8038AC7 sudo blkid /dev/sda1 | awk -F'"' '{print $2}'
+UUID=96A803ADA8038AC7 /media auto nosuid,nodev,nofail 0 0
+```
+
+
+## Configure Samba
+
+`nano /etc/samba/smb.conf`
+
+``` config
+# media share usb
+[media]
+   path = /media/transmission
+   browsable = yes
+   writable = yes
+   read only = no
+   guest ok = yes
+```
+
+`service smbd restart`
+
 ### Avoid USB powering-off the external drive
+
+`nano /etc/default/grub`
+
+`GRUB_CMDLINE_LINUX_DEFAULT="usbcore.autosuspend=-1"`
+
+`update-grub`
+
+`cat /sys/module/usbcore/parameters/autosuspend`
+
 
 ## Install Transmission
 
@@ -62,6 +105,14 @@ service transmission-daemon reload
 ~~~
 
 There is plenty of documentation about configuration settings for Transmision
+
+## Install duf
+
+```
+curl -s https://api.github.com/repos/muesli/duf/releases/latest | grep browser_download_url | grep linux_amd64.deb | cut -d '"' -f 4 | wget -i -
+dpkg -i duf_*_linux_amd64.deb
+duf
+```
 
 ---
 
