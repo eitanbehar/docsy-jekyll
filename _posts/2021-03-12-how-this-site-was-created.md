@@ -1,8 +1,6 @@
 ---
 title:  "How this site was created"
-subtitle:  "Publishing a site using an SSG from GitHub Actions"
-subtitle:  "Moving away from Wordpress to SSG"
-date:   2020-03-12 
+date:   2021-03-12 
 badges: 
  - type: info
    tag: docker
@@ -13,6 +11,8 @@ badges:
 tags:
  - github-actions
 ---
+
+# Publishing a site using an SSG from GitHub Actions
 
 After using Wordpress for several years (on-off), I decided to move SSG (Static Site Generator)
 I come to love `markdown`, and the ability to write my posts from `VS Code` directly.
