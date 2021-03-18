@@ -2,9 +2,9 @@
 title:  "How To Extract a Certificate From a HTTPS Call"
 date:   2021-03-08 
 badges: 
- - type: primary
+ - type: info
    tag: https
- - type: seconday
+ - type: info
    tag: certificate
 tags:
  - netcore
