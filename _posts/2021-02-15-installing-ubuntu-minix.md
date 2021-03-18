@@ -1,10 +1,12 @@
 ---
-title:  "Installing Ubuntu and Tranmission in a Minix Neo Z64-W"
+title:  "Home Server with Ubuntu and a Streaming Device"
 date:   2021-02-15 
 categories: linux
 tags:
  - linux
 ---
+
+# Installing Ubuntu and Tranmission in a Minix Neo Z64-W
 
 Got a Minix Neo Z64-W from a friend, it comes with Windows, and runs pretty sluggish
 My old XtreamerTV device managed to burn two internal 2.5" hard drives (this is another story)
