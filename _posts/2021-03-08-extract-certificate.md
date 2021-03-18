@@ -1,28 +1,30 @@
 ---
-title:  "How To Extract A Certificate From A HTTPS Call Using .NET Core"
+title:  "How To Extract a Certificate From a HTTPS Call"
 date:   2021-03-08 
 badges: 
- - type: info
+ - type: primary
    tag: https
+ - type: seconday
+   tag: certificate
 tags:
  - netcore
  - csharp
 ---
 
-# Extract A Certificate From A HTTPS Call Using .NET Core
+# Export a Server Certificate Using .NET Core
 
-Sometimes you want to programmatically extract / export the server certificates in a HTTPS call. 
+Sometimes you want to programmatically extract / export the server certificates in a HTTPS call.  
 Well, it’s pretty simple. See below a C# working example for .NET Core
 
 <!--more-->
 
-### Declare your Http Handler
+## Declare your Http Handler
 
 ~~~ csharp
 private readonly HttpClientHandler handler; 
 ~~~
 
-### Initialize the handler, Callback method, and Certificate Export
+## Initialize the handler, Callback method, and Certificate Export
 
 ~~~ csharp
 handler = new HttpClientHandler
@@ -36,7 +38,7 @@ handler = new HttpClientHandler
 };
 ~~~ 
 
-### Do a HTTP call using the handler
+## Do a HTTP call using the handler
 
 ~~~ csharp
 public string DoACall(string url)
@@ -49,14 +51,14 @@ public string DoACall(string url)
 }
 ~~~
 
-### Usage
+## Usage
 
 ~~~ csharp
 var caller = new WebCaller();
 var result = caller.DoACall("https://google.com/");
 ~~~ 
 
-### Source Code
+## Source Code
 
 <https://github.com/eitanbehar/WebClient>
 
