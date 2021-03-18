@@ -9,6 +9,8 @@ tags:
  - csharp
 ---
 
+# Extract A Certificate From A HTTPS Call Using .NET Core
+
 Sometimes you want to programmatically extract / export the server certificates in a HTTPS call. 
 Well, it’s pretty simple. See below a C# working example for .NET Core
 
