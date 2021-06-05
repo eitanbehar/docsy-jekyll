@@ -1,6 +1,9 @@
 ---
-title: Debugging Javascript scripts in VS Code
-tags: [howto], [javascript]
+title: "Debugging Javascript scripts in VS Code"
+date: 2020-08-24
+tags:
+ - javascript
+ - vscode
 ---
 
 To debug Javascript code in VS Code you will need: 
