@@ -43,7 +43,7 @@ jobs:
         username: baconao_posts@baconao.net
         password: +(b5y.,T_0EC
         local-dir: ./_site/
-        remote-dir: ./
+        server-dir: ./
 
     # Sync website from github
     #- name: ftp-action
