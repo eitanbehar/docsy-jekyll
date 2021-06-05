@@ -44,7 +44,7 @@ jobs:
         password: +(b5y.,T_0EC
         local-dir: ./_site/
         server-dir: ./
-        state-name: ./sync.json
+        state-name: ../sync.json
 
     # Sync website from github
     #- name: ftp-action
