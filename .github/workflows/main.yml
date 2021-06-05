@@ -35,16 +35,25 @@ jobs:
 
     - name: find running container
       run: docker ps -a
+      
+    - name: sync-files-ftp
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: baconao.net
+        username: baconao_posts@baconao.net
+        password: +(b5y.,T_0EC
+        local-dir: ./_site/
+        remote-dir: ./
 
     # Sync website from github
-    - name: ftp-action
-      uses: sebastianpopp/ftp-action@v2.0.0
-      with: 
-        host: baconao.net
-        user: baconao_posts@baconao.net
-        password: +(b5y.,T_0EC
-        localDir: ./_site
-        forceSsl: true
-        remoteDir: .
+    #- name: ftp-action
+    #  uses: sebastianpopp/ftp-action@v2.0.0
+    #  with: 
+    #    host: baconao.net
+    #    user: baconao_posts@baconao.net
+    #    password: +(b5y.,T_0EC
+    #    localDir: ./_site
+    #    forceSsl: true
+    #   remoteDir: .
         
         
