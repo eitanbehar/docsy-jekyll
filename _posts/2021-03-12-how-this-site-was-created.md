@@ -74,6 +74,8 @@ So, change it to only `build`:
         remoteDir: .
 ~~~
 
+> Note: Lately this stop working, so I switched to library: SamKirkland/FTP-Deploy-Action@4.0.0>
+
 ## Hosting account
 
 I used my own domain hosting company to hosts the site.  
