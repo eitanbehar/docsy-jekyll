@@ -32,6 +32,9 @@ jobs:
     
     - name: Take a look at site content
       run: ls ./_site
+      
+    - name: Grant permissions to new site 
+      run: sudo chown -R $(whoami):$(whoami) ./site/ 
 
     - name: find running container
       run: docker ps -a
