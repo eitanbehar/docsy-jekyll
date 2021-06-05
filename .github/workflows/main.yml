@@ -33,9 +33,6 @@ jobs:
     - name: Take a look at site content
       run: ls ./_site
       
-    - name: Grant permissions to new site 
-      run: sudo chown -R $(whoami):$(whoami) ./site
-
     - name: find running container
       run: docker ps -a
       
@@ -47,6 +44,7 @@ jobs:
         password: +(b5y.,T_0EC
         local-dir: ./_site/
         server-dir: ./
+        state-name: ./sync.json
 
     # Sync website from github
     #- name: ftp-action
