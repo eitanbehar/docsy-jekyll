@@ -9,6 +9,7 @@ badges:
 tags:
  - github-actions
  - docker
+ - ubuntu
 ---
 
 # Publishing a site using an SSG from GitHub Actions
