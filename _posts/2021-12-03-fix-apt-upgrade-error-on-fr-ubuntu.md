@@ -1,6 +1,6 @@
 ---
 title:  "Fix apt upgrade error when connecting to fr.archive.ubuntu.com"
-date:   2021-03-12 
+date:   2021-12-03 
 badges: 
  - type: info
    tag: apt-get
