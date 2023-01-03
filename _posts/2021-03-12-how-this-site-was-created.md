@@ -9,6 +9,7 @@ badges:
 tags:
  - github-actions
  - docker
+ - ubuntu
 ---
 
 # Publishing a site using an SSG from GitHub Actions
@@ -73,6 +74,8 @@ So, change it to only `build`:
         localDir: ./_site
         remoteDir: .
 ~~~
+
+> Note: Lately this stop working, so I switched to library: SamKirkland/FTP-Deploy-Action@4.0.0>
 
 ## Hosting account
 

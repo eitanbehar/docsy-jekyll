@@ -1,17 +1,20 @@
 ---
-title: Debugging Gigya JS in VS Code
-tags: [howto]
+title: "Debugging Javascript scripts in VS Code"
+date: 2020-08-24
+tags:
+ - javascript
+ - vscode
 ---
 
-To debug Gigya Javascript code in VS Code you will need: 
+To debug Javascript code in VS Code you will need: 
 * VS Code, and two extensions: Live Server, Chrome Debugger.
 * Download the JS file for the corresponding site
 ```
-https://cdns.us1.gigya.com/js/gigya.js?apiKey=<API-KEY-GOES-HERE>
+https://<source?/script.js?
 ```
 * Change JS reference to the local file
 ```
-<script src="../scripts/gigya.js?apiKey=<API-KEY-GOES-HERE>"></script>
+<script src="../scripts/script.js
 ```
 * Format JS file (use some online beautifier, e.g https://beautifier.io/)
 * Set your launch.json file

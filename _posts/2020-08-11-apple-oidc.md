@@ -8,7 +8,7 @@ badges:
    tag: apple
 ---
 
-What we have learned when configuring Apple for OIDC Login
+Lessons learned when configuring Apple for OIDC Login
 
 
 <!--more-->

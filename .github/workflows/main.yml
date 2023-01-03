@@ -32,7 +32,7 @@ jobs:
     
     - name: Take a look at site content
       run: ls ./_site
-
+      
     - name: find running container
       run: docker ps -a
 
@@ -45,5 +45,4 @@ jobs:
         password: ${{ secrets.ftp_password }}
         local-dir: ./_site/
         server-dir: ./
-        
         

@@ -1,6 +1,6 @@
 ---
 title:  "How To Create a Docker Image during GitLab Pipeline"
-date:   2021-03-12 
+date:   2020-08-20 
 badges: 
  - type: info
    tag: k8s 
