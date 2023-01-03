@@ -20,7 +20,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     - name: Grant permissions
       run: sudo chown -R $(whoami):$(whoami) ./ 
 
@@ -35,14 +35,26 @@ jobs:
       
     - name: find running container
       run: docker ps -a
-
-    # Sync website from github
-    - name: ftp-deploy-action
-      uses: SamKirkland/FTP-Deploy-Action@4.3.3
-      with: 
+      
+    - name: sync-files-ftp
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
         server: baconao.net
         username: baconao_posts@baconao.net
-        password: ${{ secrets.ftp_password }}
+        password: +(b5y.,T_0EC
         local-dir: ./_site/
         server-dir: ./
+        state-name: ../sync.json
+
+    # Sync website from github
+    #- name: ftp-action
+    #  uses: sebastianpopp/ftp-action@v2.0.0
+    #  with: 
+    #    host: baconao.net
+    #    user: baconao_posts@baconao.net
+    #    password: +(b5y.,T_0EC
+    #    localDir: ./_site
+    #    forceSsl: true
+    #   remoteDir: .
+        
         
