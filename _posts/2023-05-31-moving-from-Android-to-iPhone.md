@@ -26,6 +26,8 @@ Moving to: iPhone 14 Max
 * Google News integrated on swipe right 
 * Scan to PDF to Google Drive
 * Control over audio control
+* Built-in Translation to Hebrew
+* Multi language assistant - Siri works with only one language
 
 # What's very similar and not worth moving for
 * Camera
