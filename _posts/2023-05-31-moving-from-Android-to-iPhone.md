@@ -5,7 +5,8 @@ badges:
  - type: info
    tag: mobile
 tags:
-  - mobile  
+  - iPhone
+  - Android  
 ---
 
 After several years on Android, I moved recently to iPhone.
