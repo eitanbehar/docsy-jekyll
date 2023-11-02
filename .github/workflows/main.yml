@@ -41,7 +41,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         server: baconao.net
-        username: baconao_posts@baconao.net
+        username: posts@baconao.net
         password: ${{ secrets.ftp_password }}
         local-dir: ./_site/
         server-dir: ./
