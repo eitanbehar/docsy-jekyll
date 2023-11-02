@@ -6,6 +6,8 @@ badges:
    tag: linux
  - type: info
    tag: fedora
+tags:
+  - linux  
 ---
 
 The Minix NEO Z64-W is intended to run Windows, but, since it has an Intel chipset, it runs Linux Server pretty well.
