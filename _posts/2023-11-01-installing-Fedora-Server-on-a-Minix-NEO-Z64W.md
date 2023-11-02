@@ -48,7 +48,7 @@ UUID=96A803ADA8038AC7 /media/external auto nosuid,nodev,nofail 0 0
 media/external/transmission 192.168.1.0/24(rw,sync,insecure,all_squash,anonuid=0,anongi>
 /media/backup 192.168.1.0/24(rw,sync,insecure,all_squash,anonuid=0,anongid=0)
 ```
-* exportfs -ra
+* `exportfs -ra`
 
 ## Disable Firewall
 * `systemctl stop firewalld`
