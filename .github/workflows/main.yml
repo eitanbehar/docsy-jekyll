@@ -30,7 +30,7 @@ jobs:
     - name: Build site with docker-compose
       run: docker-compose up
     
-    - name: Take a look at site content - recursive
+    - name: Take a look at site content -- recursive
       run: ls --recursive ./_site
       
     - name: find running container
