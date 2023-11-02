@@ -1,6 +1,6 @@
 ---
 title:  "Fedora Server on Minix NEO Z64-W"
-date:   2023-11-02
+date:   2023-11-01
 badges: 
  - type: info
    tag: linux
