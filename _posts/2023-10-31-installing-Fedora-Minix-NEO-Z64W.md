@@ -1,13 +1,12 @@
 ---
-title: "Fedora Server on Minix NEO Z64W"
-date: 2023-11-01
+title:  "Fedora Server on Minix NEO Z64W"
+date:   2023-10-31 
 badges: 
  - type: info
    tag: linux
- - type: info
-   tag: fedora
 tags:
-  - linux  
+  - linux
+  - fedora  
 ---
 
 The Minix NEO Z64-W is intended to run Windows, but, since it has an Intel chipset, it runs Linux Server pretty well.
