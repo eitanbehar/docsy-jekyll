@@ -15,6 +15,8 @@ Here are my takes on the process
 Android history: Galaxy 2, Galaxy 4, Galaxy 6, Pocofone, Pixel 4 XL
 Moving to: iPhone 14 Max
 
+<!--more-->
+
 # What I like
 * Smoothness, both switching apps and within apps
 * Font control over particular apps
