@@ -29,8 +29,8 @@ The preparation process is straighforward:
 * `mkdir /media/external /media/backup`
 * `mount /dev/sda1 /media/external`
 * `mount /dev/sda2 /media/backup`
-* 'blkid /dev/sda1' 
-* 'cp /etc/fstab /etc/fstab.backup'
+* `blkid /dev/sda1` 
+* `cp /etc/fstab /etc/fstab.backup`
 * `nano /etc/fstab`
 ```
 UUID=384A8DB912EAB6E6 /media/backup auto nosuid,nodev,nofail 0 0
