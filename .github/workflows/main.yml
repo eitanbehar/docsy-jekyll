@@ -47,7 +47,7 @@ jobs:
       
     # ftp account to /home/baconaon/public_html/posts
     - name: sync-files-ftp
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      uses: SamKirkland/FTP-Deploy-Action@4.3.5
       with:
         server: baconao.net
         username: posts@baconao.net
