@@ -49,7 +49,7 @@ jobs:
     - name: sync-files-ftp
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: baconao.net
+        server: 142.214.186.146
         username: posts@baconao.net
         password: ${{ secrets.ftp_password }}
         local-dir: ./_site/
