@@ -8,7 +8,7 @@ badges:
    tag: github
 ---
 
-GitHub allows you to host pages directly from your repo (all SAP users have GitHub accounts)
+GitHub allows you to host pages directly from your repo 
 Here are the steps I did:
 For GitHub:
 - Create a repository for your project (you can name it anything).
