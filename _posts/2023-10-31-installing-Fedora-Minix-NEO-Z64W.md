@@ -53,3 +53,16 @@ UUID=96A803ADA8038AC7 /media/external auto nosuid,nodev,nofail 0 0
 * `systemctl stop firewalld`
 * `systemctl disable firewalld`
  
+## Reloading USB after unplugging the extenal drive
+
+Check disk
+'
+sudo fdisk -l | grep sd
+'
+
+List USB devices:
+'
+lsblk -f
+'
+
+
