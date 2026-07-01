@@ -20,7 +20,7 @@ The Model Context Protocol (MCP) allows LLMs to interact with remote tools and d
 
 This guide outlines how to connect **Joey** (an iOS MCP client) to a Python server built with **FastMCP** and hosted on **Render** using a stateless, unified HTTP transport.
 
-<!-- more -->
+<!--more-->
 
 ---
 
