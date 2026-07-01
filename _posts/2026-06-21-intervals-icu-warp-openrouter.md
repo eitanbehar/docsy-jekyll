@@ -1,5 +1,5 @@
 ---
-title:  "Mobile AI and Cloud Context: Connecting Joey iOS to FastMCP on Render"
+title:  "Using Local AI Agents to Analyze Personal Fitness Data"
 date:   2026-06-21
 badges:
  - type: info
