@@ -1,59 +1,44 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v3
+      # 1. Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Updated to v4 for security and performance
 
-    - name: Set up Docker
-      uses: docker/setup-buildx-action@v2
+      # 2. Create target folder (No sudo required)
+      - name: Create target folder
+        run: mkdir -p ./_site
 
-    - name: Install Docker Compose
-      run: |
-          sudo apt-get update
-          sudo apt-get install -y docker-compose
-    
-    - name: Grant permissions
-      run: sudo chown -R $(whoami):$(whoami) ./ 
+      # 3. Build site using the pre-installed Docker Compose V2
+      # Note: Adjust if your compose file requires a specific service to exit
+      - name: Build site with docker compose
+        run: docker compose up --build
 
-    - name: Create target folder
-      run: sudo mkdir ./_site
-
-    - name: Build site with docker-compose
-      run: docker-compose up
-    
-    - name: Take a look at site content -- recursive
-      run: ls --recursive ./_site
-      
-    - name: find running container
-      run: docker ps -a
-      
-    # ftp account to /home/baconaon/public_html/posts - use ip
-    - name: sync-files-ftp
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: 142.214.186.146
-        username: posts@baconao.net
-        password: ${{ secrets.ftp_password }}
-        local-dir: ./_site/
-        server-dir: ./
-        state-name: ../sync.json
+      # 4. Debugging: Check the contents of the generated site
+      - name: Take a look at site content -- recursive
+        run: ls -R ./_site
         
+      # 5. Debugging: Check container states
+      - name: Find running containers
+        run: docker ps -a
         
+      # 6. Deploy to FTP
+      - name: Sync files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5 # Pin to a stable v4 patch
+        with:
+          server: baconao.net
+          username: posts@baconao.net
+          password: ${{ secrets.ftp_password }}
+          local-dir: ./_site/
+          server-dir: ./
+          state-name: ../sync.json
